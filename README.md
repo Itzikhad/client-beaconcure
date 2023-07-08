@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# React App Client - Beaconcure
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React app that serves as a file explorer. It allows users to fetch and display files data from a server and view details of individual tables within the files.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Run `npm install` to install the required dependencies.
 
-### `npm start`
+## Running Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the React app locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Install the required dependencies by running `npm install`.
+2. Start the server by running `npm start`.
+3. Open your web browser and navigate to `http://localhost:3000`.
 
-### `npm test`
+<ins>**Note**</ins>: the client app is reaching out an a server at url `https://localhost:5000`.
+>Until docker implementation is completed the client and server runs seperately. make sure the server runs before the client.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Start the server by running `npm start`.
+2. Open your web browser and navigate to `http://localhost:3000` to access the app.
+3. Click the "Get Files" button to fetch the files data from the server.
+4. The list of files will be displayed in an accordion-style format.
+5. Click on a file to expand and view its tables.
+6. Click on a table to view its details.
+7. To close the table details view, click the "Close" button.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Folder Structure
 
-### `npm run eject`
+The app follows the following folder structure:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `src/`: The root directory of the React app.
+  - `index.js`: The entry point of the React app.
+  - `index.css`: The CSS file for the index page.
+  - `views/`: Directory containing main views or pages of the app.
+    - `App.js`: The main component of the app responsible for rendering other components.
+    - `App.css`: The CSS file for the `App` component.
+  - `utils/`: Directory containing utility files.
+    - `colors.js`: A utility file providing global color variables for the app.
+  - `components/`: Directory containing reusable components used in the app.
+    - `FilesList/`: Directory containing files related to the file list component.
+      - `FilesList.js`: Component that renders a list of files with accordion-style expanding sections.
+      - `FilesList.css`: The CSS file for the `FilesList` component.
+    - `TableList/`: Directory containing files related to the table list component.
+      - `TableList.js`: Component that renders a list of tables as clickable items.
+    - `TableDetails/`: Directory containing files related to the table details component.
+      - `TableDetails.js`: Component that renders details of a selected table.
+      - `TableDetails.css`: The CSS file for the `TableDetails` component.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## External Libraries
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This app utilizes the following external libraries:
 
-## Learn More
+- <ins>**React**</ins>: A JavaScript library for building user interfaces.
+- <ins>**axios**</ins>: A promise-based HTTP client for making API requests.
+- <ins>**Material-UI**</ins>: A popular React UI framework for building responsive and beautiful user interfaces.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Additional Information
 
-### Code Splitting
+For more detailed information about each file or component, please refer to the individual files and their respective comments.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future Improvements
 
-### Making a Progressive Web App
+* Dockerize the client with the server to create a single instance.
+> TODO: implement dockerizing the app by writing docker compose and dockerfile files
+* Add configuration file for global constants such as port and server url.
+* ad theme and better color handling with mui elements
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

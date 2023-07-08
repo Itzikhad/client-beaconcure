@@ -1,0 +1,23 @@
+/* 
+  FilesList.css
+
+  Styles for the FileList component.
+*/
+
+
+/* Styles for the file accordion */
+.files-accordion {
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+/* Styles for the files list container */
+.files-list-container {
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 5%;
+    height: max-content;
+    width: max-content;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #2e3830;
+}
