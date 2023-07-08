@@ -74,6 +74,6 @@ For more detailed information about each file or component, please refer to the 
 * Dockerize the client with the server to create a single instance.
 > TODO: implement dockerizing the app by writing docker compose and dockerfile files
 * Add configuration file for global constants such as port and server url.
-* ad theme and better color handling with mui elements
+* Add theme support and better color handling with mui elements
 ---
 
