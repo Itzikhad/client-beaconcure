@@ -88,7 +88,7 @@ const App = () => {
       <button className="get-files-button" onClick={handleGetFiles} >
         Get Files
       </button>
-      <>
+      
         <div className='body-container'>
           {files.length > 0 ? (
             <FileList files={files} onTableClick={handleTableClick} />
@@ -99,7 +99,7 @@ const App = () => {
             {selectedTable && <TableDetails table={selectedTable} onTableClick={handleTableClick} />}
           </>
         </div>
-      </>
+      
     </div>
   );
 };

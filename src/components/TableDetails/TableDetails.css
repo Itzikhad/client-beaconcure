@@ -9,6 +9,7 @@
 .table-details-container {
   border-radius: 10px;
   margin-left: 5%;
+  margin-right: 5%;
   display: flex;
   width: max-content;
   flex-direction: column;
